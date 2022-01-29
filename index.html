@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="keyboard.css" />
-    <script src="keyboard.js" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="keyboard.css" />
+    <script src="keyboard.js" type="text/javascript" charset="UTF-8"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <title>Multi-lingual virtual keyboard</title>
   </head>
   <body>
-    <h1>Multi-lingual keyboard</h1>
-    <h2>Instructions</h2>
-    <ul>
-      <li>Default language is English.</li>
-      <li>you can change languages using language dropown.</li>
-      <li>
-        click on the text area to choose your language and to use virtual
-        keyboard.
-      </li>
-      <li>use this ⇑ sign to make the keyboard size larger.</li>
-    </ul>
-    <div class="container">
+    <!-- HELLO! Danish here, creator of this keyboard, I have added comments for you, so that you can understand the script easily. enjoy :) -->
+
+    <div class="container1">
+      <h1>Multi-lingual keyboard</h1>
+      <h3><i> write in 100+ languages </i></h3>
+      <h2>Instructions</h2>
+      <ul>
+        <li>Default language is US English.</li>
+        <li>
+          You can change languages using language dropown on the top left of
+          keyboard.
+        </li>
+        <li>
+          Click on the keyboard icon (right-bottom to the text field) to choose
+          your language and to use virtual keyboard.
+        </li>
+        <li>Use these ⇓ ⇑ signs to change the keyboard size.</li>
+        <li>To use numpad click or tab on #</li>
+      </ul>
+    </div>
+    <div class="container2">
       <div class="semi-container">
         <div>
           <textarea
             lang="en"
             class="keyboardInput"
             id="Input"
-            cols="65"
+            cols="70"
             rows="15"
+            placeholder="Enter Your text here"
           ></textarea>
         </div>
         <div class="btn-div">
@@ -46,23 +57,7 @@
       </div>
     </div>
 
-    <script>
-      function handleCopy() {
-        /* Get the text field */
-        var copyText = document.getElementById("Input");
-
-        /* Select the text field */
-        copyText.select();
-        copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-        /* Copy the text inside the text field */
-        navigator.clipboard.writeText(copyText.value);
-
-        /* Alert the copied text */
-        alert("Copied the text: " + copyText.value);
-      }
-    </script>
-
+    <!-- Unlike other online keyboards, in this keyboard you can write with both the virtual as well as physical keyboard, Using following script -->
     <script>
       // John Resig's addEvent/removeEvent methods
       function addEvent(obj, type, fn) {
